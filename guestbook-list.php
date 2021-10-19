@@ -1,5 +1,12 @@
 <?php
+    require('config/config.php');
+	require('config/db.php');
 
+    $query = 'SELECT * FROM person ORDER BY pid DESC';
+    $result = mysqli_query($conn, $query);
+    $posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    mysqli_free_result($result);
+    mysqli_close($conn);
 ?>
 
 <?php include('inc/header.php'); ?>
@@ -19,7 +26,7 @@
 		
 			<div class="well">
                 <tbody>
-                <?php foreach($persons as $person) : ?>
+                <?php foreach($posts as $person) : ?>
                     <tr>
                     <th scope="row"><?php echo $person['pid'];?></th>
                     <td><?php echo $person['lastname'];?></td>
@@ -33,6 +40,6 @@
         </table>
         <br/>
 
-            <button type="button" class="btn btn-dark btn-sm" onclick="document.location='guestbook-login.php'">Logout</button>
+        <button type="button" class="btn btn-dark btn-sm" onclick="document.location='guestbook-login.php'">Logout</button>
 </div>
 <?php include('inc/footer.php'); ?>
