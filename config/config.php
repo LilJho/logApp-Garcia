@@ -1,6 +1,6 @@
 <?php
-	define('ROOT_URL', 'http://localhost/logApp-scaling-octo/');
-	define('DB_HOST', 'localhost');
-	define('DB_USER', 'root');
-	define('DB_PASS', 'harutsuki_123');
-	define('DB_NAME', 'php');
+	define('ROOT_URL', 'http://localhost/logApp-Garcia/');
+	define('DB_HOST', 'sql6.freesqldatabase.com');
+	define('DB_USER', 'sql6447458');
+	define('DB_PASS', 'FiiQndG7VU');
+	define('DB_NAME', 'sql6447458');

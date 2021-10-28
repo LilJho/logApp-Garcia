@@ -7,7 +7,7 @@
 		$un= $_POST['username'];
 		$pw= $_POST['password'];
 
-		$result= $conn->query("SELECT * FROM account WHERE username='$un' AND password='$pw'") or die('Cannot login:'.mysqli_error()); 
+		$result= $conn->query("SELECT * FROM USERACCOUNT WHERE username='$un' AND password='$pw'") or die('Cannot login:'.mysqli_error()); 
 
 		$row= $result ->Fetch_array();
 		$nr= $result->num_rows;
